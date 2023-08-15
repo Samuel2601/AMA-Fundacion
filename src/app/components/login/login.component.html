@@ -1,0 +1,82 @@
+<div class="container d-flex">
+  <div class="content">
+      <div class="main-content">
+          <div class="row justify-content-center">
+              
+              <div class="col-12 col-md-5 col-xl-4 my-5 order-md-last">
+                <!-- Heading -->
+                <h1 class="display-4 text-center mb-3">Iniciar Sesión</h1>
+                
+                <!-- Form -->
+                <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                  <!-- Email address -->
+                  <div class="form-group">
+                    <!-- Label -->
+                    <label>Correo electrónico</label>
+                    
+                    <!-- Input -->
+                    <input
+                      type="email"
+                      class="form-control"
+                      required
+                      placeholder="name@address.com"
+                      pattern="^[a-z0-9@.!#$%&’*+-/=?^_`{|}~]+$"
+                      #email="ngModel"
+                      name="email"
+                      [(ngModel)]="admin.email"
+                    />
+                  </div>
+                  
+                  <!-- Password -->
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <!-- Label -->
+                        <label>Contraseña</label>
+                      </div>
+                    </div>
+                    <!-- / .row -->
+                    
+                    <!-- Input group -->
+                    <div class="input-group input-group-merge">
+                      <!-- Input -->
+                      <input
+                        type="password"
+                        class="form-control form-control-appended"
+                        placeholder="Ingresa tu contraseña"
+                        id="password"
+                        #password="ngModel"
+                        name="password"
+                        [(ngModel)]="admin.password"
+                      />
+                      
+                      <!-- Icon -->
+                      <div class="input-group-append">
+                        <span class="input-group-text" (click)="view_password()" style="cursor: pointer">
+                          <i class="bi bi-eye-slash-fill"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="">No recuerdas tu contraseña?</a>
+                  <br>
+                  <br>
+                  <!-- Submit -->
+                 <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
+                
+                 </form>
+                 
+              </div>
+              <div class="col-12 col-md-7 col-xl-8 my-5 order-md-first"> <!-- Mueve la imagen a la izquierda con 'order-md-first' -->
+                  <!-- Imagen de 300x300 -->
+                  <img src="/assets/logo-wt.png" alt="Imagen" class="img-fluid" >
+                  
+                <!-- Subheading -->
+                <p class="text-muted text-center mb-5">Ama tu prójimo como a ti mismo.</p>
+                
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<app-footer class="footer"></app-footer>

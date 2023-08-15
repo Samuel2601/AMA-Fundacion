@@ -1,0 +1,123 @@
+{
+    "usuarios": [
+      {
+        "id_usuario": 3,
+        "Nombres": "Orlando",
+        "Apellidos": "Espinel",
+        "Correo": "orlando@gmail.com",
+        "Contraseña": "12345",
+        "fk_idrol": 1
+      },
+      {
+        "id_usuario": 4,
+        "Nombres": "Joel",
+        "Apellidos": "Aguirre",
+        "Correo": "joel@gmail.com",
+        "Contraseña": "joel",
+        "fk_idrol": 1
+      },
+      {
+        "id_usuario": 6,
+        "Nombres": "Jorge",
+        "Apellidos": "Ramirez",
+        "Correo": "jorge@gmail.com",
+        "Contraseña": "jorge",
+        "fk_idrol": 2
+      },
+      {
+        "id_usuario": 7,
+        "Nombres": "Andrea",
+        "Apellidos": "Lopez",
+        "Correo": "andrea@gmail.com",
+        "Contraseña": "andrea",
+        "fk_idrol": 1
+      },
+      {
+        "id_usuario": 8,
+        "Nombres": "Angel",
+        "Apellidos": "Peralta",
+        "Correo": "angel@hotmail.com",
+        "Contraseña": "angel",
+        "fk_idrol": 2
+      },
+      {
+        "id_usuario": 9,
+        "Nombres": "Roxana",
+        "Apellidos": "García",
+        "Correo": "roxana@gmail.com",
+        "Contraseña": "roxana",
+        "fk_idrol": 1
+      },
+      {
+        "id_usuario": 12,
+        "Nombres": "Andres",
+        "Apellidos": "Aguilar",
+        "Correo": "andres@gmail.com",
+        "Contraseña": "231badb19b93e44f47da1bd64a8147f2",
+        "fk_idrol": "Administrador"
+      }
+    ],
+    "pacientes": [
+      {
+        "id_paciente": 1,
+        "Cedula": "0905142048",
+        "Nombres": "Wilson",
+        "Apellidos": "Flores",
+        "Correo": "wilson@hotmail.com",
+        "Contraseña": "12345",
+        "Celular": "0997866102",
+        "Provincia": "Guayas",
+        "Ciudad": "Guayaquil",
+        "FechaNacimiento": "1997-07-26"
+      },
+      {
+        "id_paciente": 2,
+        "Cedula": "0941501959",
+        "Nombres": "Luis",
+        "Apellidos": "Garcia",
+        "Correo": "luis@gmail.com",
+        "Contraseña": "123",
+        "Celular": "0987654321",
+        "Provincia": "Manabi",
+        "Ciudad": "Chone",
+        "FechaNacimiento": "2000-06-19"
+      },
+      {
+        "id_paciente": 9,
+        "Cedula": "0941291304",
+        "Nombres": "Angelica",
+        "Apellidos": "Ramirez",
+        "Correo": "angelica@gmail.com",
+        "Contraseña": "angelica",
+        "Celular": "0987654321",
+        "Provincia": "Guayas",
+        "Ciudad": "Guayaquil",
+        "FechaNacimiento": "1997-07-05"
+      },
+      {
+        "id_paciente": 14,
+        "Cedula": "0903110997",
+        "Nombres": "Georgina",
+        "Apellidos": "Obando",
+        "Correo": "georgina@gmail.com",
+        "Contraseña": "georgina",
+        "Celular": "456789",
+        "Provincia": "fgdsahjkl",
+        "Ciudad": "fghjkl",
+        "FechaNacimiento": "1999-06-05"
+      },
+      {
+        "id_paciente": 15,
+        "Cedula": "0908747827",
+        "Nombres": "Enrique",
+        "Apellidos": "Vargas",
+        "Correo": "enrique@gmail.com",
+        "Contraseña": "enrique",
+        "Celular": "0987654321",
+        "Provincia": "Guayas",
+        "Ciudad": "Guayaquil",
+        "FechaNacimiento": "1980-10-10"
+      }
+    ]
+  }
+  

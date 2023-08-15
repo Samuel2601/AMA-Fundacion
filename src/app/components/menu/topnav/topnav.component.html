@@ -1,0 +1,141 @@
+<div class="container">
+  
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-flex flex-row" >
+      <div class="container-fluid">
+        <div class="btn-group">
+          <div class="btn-group dropstart" role="group">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
+
+          </div>
+          <a class="navbar-brand" href="inicio" style="padding: 0;">
+            <img src="/assets/logo-wt.png" alt="logo" style="max-height: 4rem;"/>
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" >
+          <ul class="navbar-nav ml-auto d-flex " >
+            <div class="btn-group dropstart">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="notificationDropdown" href="#"
+                  data-bs-toggle="dropdown">
+
+
+                  <i class="bi bi-bell fs-4 mb-3"></i>
+
+                  <span class="count"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                  aria-labelledby="notificationDropdown">
+                  <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-success">
+                        <i class=" bi bi-info-alt mx-0"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                      <p class="font-weight-light small-text mb-0 text-muted">
+                        Just now
+                      </p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-warning">
+                        <i class="bi bi-settings mx-0"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <h6 class="preview-subject font-weight-normal">Settings</h6>
+                      <p class="font-weight-light small-text mb-0 text-muted">
+                        Private message
+                      </p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-info">
+                        <i class="ti-user mx-0"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                      <p class="font-weight-light small-text mb-0 text-muted">
+                        2 days ago
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </div>
+            
+            <div class="btn-group dropstart">
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown" style="max-width: 2cm;">
+                  <img src="/assets/images/user.png" alt="profile" class="profile-img align-self-end" style="max-width: 1cm;" />
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown " aria-labelledby="profileDropdown">
+                  <a class="dropdown-item">
+                    <i class="ti-settings text-primary"></i>
+                    Configuraciones
+                  </a>
+                  <a class="dropdown-item" (click)="salir()">
+                    <i class="ti-power-off text-primary"></i>
+                    Salir
+                  </a>
+                </div>
+              </li>
+            </div>
+            
+          </ul>
+    
+        </div>
+      </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start"  style="width: 15%;" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel"><a class="navbar-brand" href="inicio"> 
+          <img src="/assets/logo-wt.png" alt="logo" style="max-height: 4rem;"/>
+        </a></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="navbar-nav">
+            <li class="nav-item btn btn-outline-light" style="text-align: left;">
+              <a class="nav-link" href="usuario">
+                <i class="bi bi-building-gear fs-4"></i>
+                <span class="menu-title ">Usuarios</span>
+              </a>
+            </li>
+            <li class="nav-item  btn btn-outline-light" style="text-align: left;">
+              <a class="nav-link" href="paciente">
+                <i class="bi bi-person-vcard fs-4 "></i>
+                <span class="menu-title ">Pacientes</span>
+              </a>
+            </li>
+            <li class="nav-item btn btn-outline-light" style="text-align: left;">
+              <a class="nav-link" href="privilegio" >
+                <i class="bi bi-controller fs-4"></i>
+                <span class="menu-title ">Privilegios</span>
+              </a>
+            </li>
+          </ul>
+          
+        </nav>
+        
+      </div>
+    </div>
+
+
+    
+
+</header>
+</div>

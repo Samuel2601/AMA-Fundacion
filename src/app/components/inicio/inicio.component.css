@@ -1,0 +1,23 @@
+.bginfo{
+  background-color: rgba(36, 138, 253, 0.2);
+}
+
+.bgsuccess{
+  background-color: rgba(87, 182, 87, 0.45);
+}
+
+.bgwarning{
+  background-color: rgba(255, 193, 0, 0.2);
+}
+
+.bgdanger{
+  background-color: rgba(220, 74, 56, 0.2);
+}
+
+.bgprimary{
+  background-color: rgba(75, 73, 172, 0.2);
+}
+
+a:hover {
+color: transparent;
+}

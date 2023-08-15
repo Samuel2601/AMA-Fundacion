@@ -1,0 +1,226 @@
+<div class="container">
+	<div class="sidebar">
+		<app-topnav></app-topnav>
+	</div>
+	
+	<div class="content">
+        <ng-container>
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-auto">
+					<!-- Header -->
+					<div class="header mt-md-5">
+						<div class="header-body">
+							<div class="row align-items-center">
+								<div class="col">
+									<!-- Pretitle -->
+									<h6 class="header-pretitle">Módulo</h6>
+
+									<!-- Title -->
+									<h1 class="header-title">USUARIO</h1>
+								</div>
+							</div>
+							<!-- / .row -->
+						</div>
+					</div>
+
+					<!-- Alert -->
+
+					<!-- Card -->
+					<form #updateForm="ngForm" (ngSubmit)="crear(updateForm)">
+						<div class="card">
+							<div class="card-header">
+								<!-- Title -->
+								<h4 class="card-header-title">Edición de Usuario</h4>
+							</div>
+
+							<div class="card-body">
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="row">
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputName">Nombres (*)</label>
+													<input
+														type="text"
+														class="form-control"
+														required
+														placeholder="{{ usuario.Nombres }}"
+														pattern="^[A-ZÁÉÍÓÚÑ ]+$"
+														name="Nombres"
+														[(ngModel)]="usuario.Nombres"
+													/>
+												</div>
+											</div>
+
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputLastName">Apellidos (*)</label>
+													<input
+														type="text"
+														class="form-control"
+														required
+														placeholder="{{ usuario.Apellidos }}"
+														pattern="^[A-ZÁÉÍÓÚÑ ]+$"
+														name="Apellidos"
+														[(ngModel)]="usuario.Apellidos"
+													/>
+												</div>
+											</div>
+
+											<div class="col-6" >
+												<div class="form-group">
+													<label for="exampleInputEmail">Correo (*)</label>
+													
+													<input 
+														type="Correo"
+														class="form-control"
+														required
+														placeholder="{{ usuario.Correo }}"
+														pattern="^[a-z0-9@.!#$%&’*+-/=?^_`{|}~]+$"
+														name="Correo"
+														[(ngModel)]="usuario.Correo"
+													/>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputPhone">Teléfono (*)</label>
+													<input
+														type="tel"
+														class="form-control"
+														required
+														placeholder="{{ usuario.telefono }}"
+														pattern="^[0-9]+$"
+														maxlength="10"
+														minlength="8"
+														name="telefono"
+														[(ngModel)]="usuario.telefono"
+													/>
+												</div>
+											</div>
+											
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputPassword">Contraseña</label>
+													<input
+														type="password"
+														class="form-control"
+														placeholder="Contraseña"
+														maxlength="50"
+														minlength="8"
+														name="Contraseña"
+														[(ngModel)]="usuario.Contrasenia"
+													/>
+												</div>
+											</div>
+
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputPassword">Repite Contraseña</label>
+													<input
+														type="password"
+														class="form-control"
+														placeholder="Repite contraseña"
+														maxlength="50"
+														minlength="8"
+														name="auxiliar"
+														[(ngModel)]="usuario.auxiliar"
+													/>
+												</div>
+											</div>
+
+
+											
+											
+
+											<div class="col-lg-6 form-group">
+												<label for="">Cédula (*)</label>
+												<input
+													type="text"
+													class="form-control"
+													placeholder="{{ usuario.dni }}"
+													pattern="^[0-9]+$"
+													maxlength="10"
+													minlength="10"
+													required
+													name="dni"
+													[(ngModel)]="usuario.dni"
+												/>
+											</div>
+
+											<div class="col-lg-6 form-group">
+												<label>Rol (*)</label>
+												<ng-container >
+													<select
+														class="form-control custom-select"
+														id="select-input"
+														required
+														name="fk_idrol"
+														[(ngModel)]="usuario.fk_idrol"
+													>
+														<option value="" selected disabled>Seleccionar</option>
+														<option value="1">Administrador</option>
+														<option value="2">Voluntario</option>
+														<option value="3">ROL 3</option>
+														<option value="4">ROL 4</option>
+													</select>
+												</ng-container>
+												
+											</div>
+											<ng-container>
+												<div class="col-lg-6 form-group">
+													<label>Estado (*)</label>
+													<select
+														class="form-control custom-select"
+														id="select-input-estado"
+														required
+														name="estado"
+														[(ngModel)]="usuario.estado"
+													>
+														<option value="" disabled>Seleccionar</option>
+														<option value="habilitado">Habilidado</option>
+														<option value="deshabilitado">Deshabilitado</option>
+													</select>
+												</div>
+											</ng-container>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								
+
+								<ng-container >
+									<a
+										class="btn btn-warning btn-shadow mr-3"
+										[routerLink]="['/usuario']"
+										routerLinkActive="router-link-active"
+										>Regresar</a
+									>
+									<button class="btn btn-primary btn-shadow" type="submit">
+										Crear
+									</button>
+								</ng-container>
+
+								<button disabled *ngIf="load_btn" type="button" class="btn btn-primary btn-shadow">
+									<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+									Creando...
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- / .row -->
+		</div>
+	</div>
+</ng-container>
+
+
+
+    </div>
+</div>
+
+<app-footer class="footer"></app-footer>
