@@ -10215,7 +10215,7 @@ a.text-white:hover {
 /* #edf2f9 */
 .card {
   margin-bottom: 1.5rem;
-  border-color: #000000;
+  border-color: #edf2f9;
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
 }
 .card > * {

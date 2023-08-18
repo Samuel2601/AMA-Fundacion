@@ -176,7 +176,15 @@
 														<td>
 															{{ item.element.Correo }}
 														</td>
-														<td>{{ item.element.fk_idrol }}</td>
+														<td>
+															<span *ngIf="item.element.fk_idrol==1">Administrador</span>
+															<span *ngIf="item.element.fk_idrol==2">Doctor(a)</span>
+															<span *ngIf="item.element.fk_idrol==3">Enfermero(a)</span>
+															<span *ngIf="item.element.fk_idrol!=1
+															&&item.element.fk_idrol!=2&&item.element.fk_idrol!=3">{{ item.element.fk_idrol }}</span>
+															
+
+														</td>
 														<td>
 															<span *ngIf="item.element.telefono">{{ item.element.telefono }}</span>
 															<span *ngIf="!item.element.telefono">No registrado</span>
