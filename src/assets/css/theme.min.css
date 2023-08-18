@@ -10212,9 +10212,10 @@ a.text-white:hover {
 .btn-group .btn + .btn {
   margin-left: 0;
 }
+/* #edf2f9 */
 .card {
   margin-bottom: 1.5rem;
-  border-color: #edf2f9;
+  border-color: #000000;
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
 }
 .card > * {

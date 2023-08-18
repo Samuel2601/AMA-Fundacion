@@ -1,2 +1,291 @@
-<p>roleuser works!</p>
+<div class="container">
+    <div class="sidebar">
+        <app-topnav></app-topnav>
+    </div>
+    <div class="content">
+
+        <div class="main-content">
+            <div class="container-fluid" >
+                <div class="row justify-content-center" >
+					<div class="col-auto">
+						<!-- Header -->
+						<div class="header mt-md-5">
+							<div class="header-body">
+								<div class="row align-items-center">
+									<div class="col">
+										<!-- Pretitle -->
+										<h6 class="header-pretitle">Privilegios</h6>
+		
+										<!-- Title -->
+										<h1 class="header-title">
+                                            Gestiona los permisos de los roles existentes.</h1>
+									</div>
+								</div>
+								<!-- / .row -->
+							</div>
+						</div>
+		
+						<!-- Alert -->
+		
+						<!-- Card -->
+                        
+
+						<div class="card-body d-flex justify-content-center align-items-center">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card rounded shadow bg-info text-white" id="Entrenador">
+                                    <div class="row d-flex align-items-center justify-content-center p-4">
+                                        <img class="card-img-top w-50" src="/assets/entrenador.png">
+                                        <h5 class="card-title mb-0 ms-4">Enfermero(a)</h5>
+                                    </div>
+                                    <div class="dropdown-content border-top border-light" id="dd_Entrenador">
+                                        <!-- Contenido del dropdown -->
+                                        <ul>
+                                            
+                                            <div class="form-check form-check-info form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Pacientes
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-info form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Reportes
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-info form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Crear Historial Clínico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-info form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Consultas Historial Clínico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-info form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar Historial Clínico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Crear datos personales del pacientes, signos vitales,
+                                                    pruebas de glucosa
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar datos personales del pacientes, signos vitales,
+                                                    pruebas de glucosa
+                                                </label>
+                                            </div>
+                                    </ul>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card rounded shadow bg-primary text-white" id="Administrador">
+                                    <div class="row d-flex align-items-center justify-content-center p-4">
+                                        <img class="card-img-top w-50" src="/assets/Admin.png">
+                                        <h5 class="card-title mb-0 ms-4">Administrador</h5>
+                                    </div>
+                                    <div class="dropdown-content border-top border-light" id="dd_Administrador">
+                                        <!-- Contenido del dropdown -->
+                                        <ul>
+                                            <div class="form-check form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Usuarios
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Pacientes
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Privilegios
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Reportes
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Crear Historial Clínico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Consultas Historial Clínico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar Historial Clínico
+                                                </label>
+                                            </div> <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Crear datos personales del pacientes, signos vitales,
+                                                    pruebas de glucosa
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar datos personales del pacientes, signos vitales,
+                                                    pruebas de glucosa
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Consultar datos personales del pacientes, signos vitales,
+                                                    pruebas de glucosa
+                                                </label>
+                                            </div>
+        
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Crear Registro de enfermedades, alergias y diagnostico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar Registro de enfermedades, alergias y diagnostico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Consultar Registro de enfermedades, alergias y diagnostico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Crear Recetas
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Consultar Recetas
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar Recetas
+                                                </label>
+                                            </div>
+                                    </ul>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card rounded shadow bg-success text-white" id="Nutricionista">
+                                    <div class="row d-flex align-items-center justify-content-center p-4">
+                                        <img class="card-img-top w-50" src="/assets/nutricionista.png">
+                                        <h5 class="card-title mb-0 ms-4">Doctor(a)</h5>
+                                    </div>
+                                    <div class="dropdown-content border-top border-light" id="dd_Nutricionista">
+                                        <!-- Contenido del dropdown -->
+                                        <ul>
+                                            
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Pacientes
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Reportes
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Consultas Historial Clínico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar Historial Clínico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Crear Registro de enfermedades, alergias y diagnostico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar Registro de enfermedades, alergias y diagnostico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Consultar Registro de enfermedades, alergias y diagnostico
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Crear Recetas
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Consultar Recetas
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-success form-check-flat">
+                                                <label class="form-check-label card-title">
+                                                    <input class="checkbox" type="checkbox">
+                                                    Modificar Recetas
+                                                </label>
+                                            </div>
+                                           
+                                    </ul>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <app-footer class="footer"></app-footer>

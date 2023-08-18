@@ -13,6 +13,12 @@ export class AdminService {
   getbase():Observable<any>{
 		return this._http.get('./assets/claves.json')
 	}
+	getprovincia():Observable<any>{
+		return this._http.get('./assets/provincias.json')
+	}
+	getciudad():Observable<any>{
+		return this._http.get('./assets/ciudades.json')
+	}
   obtener_ip_admin(): Observable<any> {
 		return this._http.get('https://api.ipify.org/?format=json');
 	}

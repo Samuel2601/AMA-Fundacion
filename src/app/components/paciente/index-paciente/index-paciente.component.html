@@ -51,31 +51,32 @@
 									<div class="row">
 										<div class="col-md-6">
 											<div class="input-group input-group-merge">
-												<ng-container>
-													<button
-														class="btn btn-danger active"
-														*ngIf="load_eliminados == false"
-														(click)="mostrar_eliminado()"
-													>
-														⥂
-													</button>
-													<button
-														class="btn btn-success"
-														*ngIf="load_eliminados == true"
-														(click)="mostrar_normales()"
-													>
-														⥄
-													</button>
-												</ng-container>
+												<select [(ngModel)]="tpfiltro" >
+													<option value="id_paciente" selected>ID</option>
+													<option value="Nombres">Nombres</option>
+													<option value="Apellidos">Apellidos</option>
+													<option value="Genero">Genero</option>
+													<option value="Correo">Correo</option>
+													<option value="Cedula">Cedula</option>
+												    <option value="Celular">Celular</option>
+
+													<option value="Provincia">Provincia</option>
+													<option value="FechaNacimiento">Fecha Nacimiento</option>
+													<option value="Ciudad">Ciudad</option>													
+												</select>
 												<input
 													type="text"
 													class="form-control form-control-appended"
 													placeholder="Buscar paciente"
 													name="filtro"
 													[(ngModel)]="filtro"
+													(ngModelChange)="filtrar_estudiante()"
 												/>
 												<div class="input-group-append">
-													<button class="btn btn-primary" (click)="filtrar_estudiante()">Buscar</button>
+													<!--
+<button class="btn btn-primary" (click)="filtrar_estudiante()">Buscar</button>
+													
+													-->
 													<ng-container  style="text-align: right">
 														<a
 															class="btn btn-primary"
@@ -94,16 +95,7 @@
 										
 		
 										<div class="col-md-6 text-right" >
-											<!-- 
-		<flatfile-button
-												*ngIf="rol == 'admin'"
-												[settings]="settings"
-												[customer]="customer"
-												[licenseKey]="licenseKey"
-												[onData]="onData.bind(this)"
-												>Subida masiva
-											</flatfile-button>
-											-->
+											
 											<div class="input-group input-group-merge">
 												<ng-container >
 													<button
@@ -114,15 +106,6 @@
 													>
 														Eliminar
 													</button>
-													<button
-														class="btn btn-success"
-														*ngIf="load_eliminados == true"
-														data-bs-toggle="modal"
-														[attr.data-bs-target]="'#activar-todo'"
-													>
-														Activar
-													</button>
-													
 												</ng-container>
 												</div>
 											
@@ -147,10 +130,10 @@
 													</th>
 													<th>id_paciente</th>
 													<th>Nombres Apellidos</th>
-													<th>Dirección</th>
+													<th>Provincia-Ciudad</th>
 													<th>Correo</th>
-													<th>Fecha de Nacimiento</th>
-                                                    <th>Teléfono</th>
+													<th>fk_idrol</th>
+                                                    <th>Celular</th>
 													<th>Opciones</th>
 												</tr>
 											</thead>
@@ -187,9 +170,10 @@
 														</td>
 			
 														<td>
-															<span >
-																{{item.element.Provincia}} - {{item.element.Ciudad}}
-																</span>
+															<span *ngIf="item.element.Provincia">{{item.element.Provincia}}</span>
+															<span *ngIf="!item.element.Provincia">No registrado</span>-
+															<span *ngIf="item.element.Ciudad">{{item.element.Ciudad}}</span>
+															<span *ngIf="!item.element.Ciudad">No registrado</span>
 														</td>
 														
 														<td>
@@ -212,8 +196,8 @@
 																	aria-expanded="false"
 																>
                                                                 Opc.
-																
-																<i class="bi bi-caret-down-fill"></i>
+                                                                
+																	<i class="bi bi-caret-down-fill"></i>
 																</button>
 			
 																<ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonAlias">
@@ -225,13 +209,15 @@
 																			>Editar</a
 																		>
 																	</li>
-			
+																	<!--
 																	<li>
 																		<a class="dropdown-item"
 																			style="cursor: pointer"
 																			data-bs-toggle="modal"
 																			[attr.data-bs-target]="'#delete-' + item.element.id_paciente">Eliminar</a>
 																	</li>
+																	-->
+																	
 																</ul>
 															</div>
 															<div
@@ -300,7 +286,7 @@
 											</button>
 										</div>
 										<div class="modal-body">
-											<p>Desea eliminar estos paciente?</p>
+											<p>Desea eliminar estos paciente?  {{ contarUsuariosSeleccionados() }}</p>
 										</div>
 										<div class="modal-footer">
 											<button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">
@@ -345,4 +331,4 @@
         </div>
     </div>
 </div>
-<app-footer class="footer"></app-footer>
+   <app-footer class="footer"></app-footer>

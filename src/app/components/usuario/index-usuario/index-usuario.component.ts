@@ -1,16 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 declare var $: any;
-declare var iziToast: {
-	show: (arg0: {
-		title: string;
-		titleColor: string;
-		color: string;
-		class: string;
-		position: string;
-		message: string;
-	}) => void;
-};
+import iziToast from 'izitoast';
 @Component({
   selector: 'app-index-usuario',
   templateUrl: './index-usuario.component.html',
@@ -93,7 +84,7 @@ export class IndexUsuarioComponent implements OnInit{
 	contarUsuariosSeleccionados(): number {
 		let contador = 0;
 		for (const usuario of this.arr_usuarios) {
-		  if (usuario.ckechk === 1) {
+		  if (usuario.ckechk == 1) {
 			contador++;
 		  }
 		}
@@ -113,38 +104,29 @@ export class IndexUsuarioComponent implements OnInit{
     $('.modal-backdrop').removeClass('show');
 	}
 	eliminar_todo() {
-		this.load_data_user = true;
+		//this.load_data_user = true;
 		//this.load_data_user=true;
 		//////console.log(id);
 		var con = 0;
-		let ultimo = 0;
-		this.arr_usuarios.forEach((element:any) => {
-			if (element.ckechk == 1) {
-				ultimo++;
-			}
-		});
-		////console.log(ultimo);
-		this.arr_usuarios.forEach((element: any) => {
-			if (element.ckechk == 1) {
-				if (con == ultimo) {
-          iziToast.show({
+		let contador = this.contarUsuariosSeleccionados();
+
+		this.arr_usuarios = this.arr_usuarios.filter(usuario => usuario.ckechk != 1);
+		console.log(this.arr_usuarios,contador);
+
+		iziToast.show({
             title: 'SUCCESS',
             titleColor: '#1DC74C',
             color: '#FFF',
             class: 'iziToast-success',
             position: 'topRight',
-            message: 'Se eliminó correctamente el(los) estudiante.' + '(' + con + ')',
+            message: 'Se eliminó correctamente uno o varios usuarios:' + '(' + contador + ')',
           });
           this.total = 0;
-          this.load_eliminados = true;
-          //this.recarga();
-          ////console.log("Fin1");
-        }
-			}
-		});
+          this.load_eliminados = false;
+		  this.load_data_user = false;
 		$('#delete-todo').modal('hide');
-		$('.modal-backdrop').removeClass('show');
-		location.reload();
+		//$('.modal-backdrop').removeClass('show');
+		//location.reload();
 	}
 	select_todo() {
 		if (this.total == 1) {

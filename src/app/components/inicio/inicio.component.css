@@ -1,5 +1,5 @@
 .bginfo{
-  background-color: rgba(36, 138, 253, 0.2);
+  background-color: rgb(168 216 219);
 }
 
 .bgsuccess{
@@ -23,5 +23,9 @@ color: transparent;
 }
 
 .text-muted {
+  color: #000000 !important;
+}
+
+.h4{
   color: #000000 !important;
 }

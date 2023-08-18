@@ -1,6 +1,6 @@
 <div class="container">
   
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-6 border-bottom">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-3 border-bottom">
   
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-flex flex-row" >
       <div class="container-fluid">
@@ -81,11 +81,11 @@
                   <img src="/assets/images/user.png" alt="profile" class="profile-img align-self-end" style="max-width: 1cm;" />
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown " aria-labelledby="profileDropdown">
-                  <a class="dropdown-item">
+                  <a class="dropdown-item" [routerLink]="['/usuario/edit', user.id_usuario]">
                     <i class="ti-settings text-primary"></i>
                     Configuraciones
                   </a>
-                  <a class="dropdown-item" (click)="salir()">
+                  <a class="dropdown-item" (click)="salir()" style="cursor: pointer;">
                     <i class="ti-power-off text-primary"></i>
                     Salir
                   </a>

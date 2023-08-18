@@ -29,10 +29,10 @@
 
 					<!-- Card -->
 					<form #updateForm="ngForm" (ngSubmit)="crear(updateForm)">
-						<div class="card">
+						<div class="card" *ngIf="load_data_user">
 							<div class="card-header">
 								<!-- Title -->
-								<h4 class="card-header-title">Edición de Usuario</h4>
+								<h4 class="card-header-title">Crear Usuario</h4>
 							</div>
 
 							<div class="card-body">
@@ -162,9 +162,8 @@
 													>
 														<option value="" selected disabled>Seleccionar</option>
 														<option value="1">Administrador</option>
-														<option value="2">Voluntario</option>
-														<option value="3">ROL 3</option>
-														<option value="4">ROL 4</option>
+														<option value="2">Doctor(a)</option>
+														<option value="3">Enfermero(a)</option>
 													</select>
 												</ng-container>
 												
@@ -190,8 +189,6 @@
 								</div>
 							</div>
 							<div class="card-footer">
-								
-
 								<ng-container >
 									<a
 										class="btn btn-warning btn-shadow mr-3"
@@ -199,15 +196,23 @@
 										routerLinkActive="router-link-active"
 										>Regresar</a
 									>
-									<button class="btn btn-primary btn-shadow" type="submit">
+									<button *ngIf="!load_btn" class="btn btn-primary btn-shadow" type="submit">
 										Crear
 									</button>
 								</ng-container>
+								
 
 								<button disabled *ngIf="load_btn" type="button" class="btn btn-primary btn-shadow">
 									<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
 									Creando...
 								</button>
+							</div>
+						</div>
+						<div class="card" *ngIf="!load_data_user">
+							<div class="card-body">
+								<div class="spinner-grow text-primary" role="status">
+									<span class="visually-hidden">Cargando...</span>
+								  </div>
 							</div>
 						</div>
 					</form>

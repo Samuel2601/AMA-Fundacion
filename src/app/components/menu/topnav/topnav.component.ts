@@ -7,9 +7,10 @@ import { Router } from '@angular/router';
 })
 export class TopnavComponent implements OnInit {
   constructor(private _router: Router) {}
-
+    public user:any;
     ngOnInit(): void {
-      
+      this.user=JSON.parse(localStorage.getItem('data_admin')||'');
+      console.log(this.user);
     }
     salir(){
       localStorage.clear();

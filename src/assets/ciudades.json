@@ -1,0 +1,156 @@
+{
+    "ciudades": [
+      {
+        "id": 1,
+        "id_provincia": 19,
+        "nombre": "Quito"
+      },
+      {
+        "id": 2,
+        "id_provincia": 10,
+        "nombre": "Guayaquil"
+      },
+      {
+        "id": 3,
+        "id_provincia": 1,
+        "nombre": "Cuenca"
+      },
+      {
+        "id": 4,
+        "id_provincia": 23,
+        "nombre": "Ambato"
+      },
+      {
+        "id": 5,
+        "id_provincia": 14,
+        "nombre": "Manta"
+      },
+      {
+        "id": 6,
+        "id_provincia": 12,
+        "nombre": "Loja"
+      },
+      {
+        "id": 7,
+        "id_provincia": 8,
+        "nombre": "Esmeraldas"
+      },
+      {
+        "id": 8,
+        "id_provincia": 11,
+        "nombre": "Ibarra"
+      },
+      {
+        "id": 9,
+        "id_provincia": 14,
+        "nombre": "Portoviejo"
+      },
+      {
+        "id": 10,
+        "id_provincia": 21,
+        "nombre": "Santo Domingo"
+      },
+      {
+        "id": 11,
+        "id_provincia": 19,
+        "nombre": "Sangolquí"
+      },
+      {
+        "id": 12,
+        "id_provincia": 10,
+        "nombre": "Durán"
+      },
+      {
+        "id": 13,
+        "id_provincia": 5,
+        "nombre": "Riobamba"
+      },
+      {
+        "id": 14,
+        "id_provincia": 16,
+        "nombre": "Tena"
+      },
+      {
+        "id": 15,
+        "id_provincia": 6,
+        "nombre": "Latacunga"
+      },
+      {
+        "id": 16,
+        "id_provincia": 9,
+        "nombre": "Puerto Baquerizo Moreno"
+      },
+      {
+        "id": 17,
+        "id_provincia": 10,
+        "nombre": "Milagro"
+      },
+      {
+        "id": 18,
+        "id_provincia": 13,
+        "nombre": "Quevedo"
+      },
+      {
+        "id": 19,
+        "id_provincia": 14,
+        "nombre": "Montecristi"
+      },
+      {
+        "id": 20,
+        "id_provincia": 1,
+        "nombre": "Azogues"
+      },
+      {
+        "id": 21,
+        "id_provincia": 10,
+        "nombre": "La Libertad"
+      },
+      {
+        "id": 22,
+        "id_provincia": 5,
+        "nombre": "Alausí"
+      },
+      {
+        "id": 23,
+        "id_provincia": 16,
+        "nombre": "Misahuallí"
+      },
+      {
+        "id": 24,
+        "id_provincia": 6,
+        "nombre": "Saquisilí"
+      },
+      {
+        "id": 25,
+        "id_provincia": 9,
+        "nombre": "Puerto Ayora"
+      },
+      {
+        "id": 26,
+        "id_provincia": 13,
+        "nombre": "Ventanas"
+      },
+      {
+        "id": 27,
+        "id_provincia": 14,
+        "nombre": "Jaramijó"
+      },
+      {
+        "id": 28,
+        "id_provincia": 1,
+        "nombre": "Biblián"
+      },
+      {
+        "id": 29,
+        "id_provincia": 10,
+        "nombre": "Playas"
+      },
+      {
+        "id": 30,
+        "id_provincia": 5,
+        "nombre": "Colta"
+      }
+    ]
+  }
+  
+  

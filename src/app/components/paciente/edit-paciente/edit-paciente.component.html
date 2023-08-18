@@ -1,2 +1,253 @@
-<p>edit-paciente works!</p>
+<div class="container">
+	<div class="sidebar">
+		<app-topnav></app-topnav>
+	</div>
+	
+	<div class="content">
+        <ng-container
+	*ngIf="
+		(usuario != undefined &&
+			rol != undefined &&
+			rol == 'admin')
+	"
+>
+	<div class="main-content" *ngIf="load_data_user">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-auto">
+					<!-- Header -->
+					<div class="header mt-md-5">
+						<div class="header-body">
+							<div class="row align-items-center">
+								<div class="col">
+									<!-- Pretitle -->
+									<h6 class="header-pretitle">Módulo</h6>
+
+									<!-- Title -->
+									<h1 class="header-title">PACIENTE</h1>
+								</div>
+							</div>
+							<!-- / .row -->
+						</div>
+					</div>
+
+					<!-- Alert -->
+
+					<!-- Card -->
+					<form #updateForm="ngForm" (ngSubmit)="actualizar(updateForm)">
+						<div class="card">
+							<div class="card-header">
+								<!-- Title -->
+								<h4 class="card-header-title">Edición de Paciente</h4>
+							</div>
+
+							<div class="card-body">
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="row">
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputName">Nombres (*)</label>
+													<input
+														type="text"
+														class="form-control"
+														required
+														placeholder="{{ usuario.Nombres }}"
+														pattern="^[A-ZÁÉÍÓÚÑ ]+$"
+														name="Nombres"
+														[(ngModel)]="usuario.Nombres"
+													/>
+												</div>
+											</div>
+
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputLastName">Apellidos (*)</label>
+													<input
+														type="text"
+														class="form-control"
+														required
+														placeholder="{{ usuario.Apellidos }}"
+														pattern="^[A-ZÁÉÍÓÚÑ ]+$"
+														name="Apellidos"
+														[(ngModel)]="usuario.Apellidos"
+													/>
+												</div>
+											</div>
+
+											<div class="col-6" >
+												<div class="form-group">
+													<label for="exampleInputEmail">Correo (*)</label>
+													
+													<input 
+														type="Correo"
+														class="form-control"
+														required
+														placeholder="{{ usuario.Correo }}"
+														pattern="^[a-z0-9@.!#$%&’*+-/=?^_`{|}~]+$"
+														name="Correo"
+														[(ngModel)]="usuario.Correo"
+													/>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputPhone">Celular (*)</label>
+													<input
+														type="tel"
+														class="form-control"
+														required
+														placeholder="{{ usuario.Celular }}"
+														pattern="^[0-9]+$"
+														maxlength="10"
+														minlength="8"
+														name="Celular"
+														[(ngModel)]="usuario.Celular"
+													/>
+												</div>
+											</div>
+											
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputPassword">Contraseña</label>
+													<input
+														type="password"
+														class="form-control"
+														placeholder="Contraseña"
+														maxlength="50"
+														minlength="8"
+														name="Contraseña"
+														[(ngModel)]="usuario.Contrasenia"
+													/>
+												</div>
+											</div>
+
+											<div class="col-6">
+												<div class="form-group">
+													<label for="exampleInputPassword">Repite Contraseña</label>
+													<input
+														type="password"
+														class="form-control"
+														placeholder="Repite contraseña"
+														maxlength="50"
+														minlength="8"
+														name="auxiliar"
+														[(ngModel)]="usuario.auxiliar"
+													/>
+												</div>
+											</div>
+
+
+											
+											
+
+											<div class="col-lg-6 form-group">
+												<label for="">Cédula (*)</label>
+												<input
+													type="text"
+													class="form-control"
+													placeholder="{{ usuario.Cedula }}"
+													pattern="^[0-9]+$"
+													maxlength="10"
+													minlength="10"
+													required
+													name="Cedula"
+													[(ngModel)]="usuario.Cedula"
+												/>
+											</div>
+                                            
+                                            <div class="col-lg-6 form-group">
+												<label for="">Provincia (*)</label>
+                                                <select class="form-select" name="Provincia" id="Provincia" [(ngModel)]="usuario.Provincia" (ngModelChange)="filtrarCiudad($event)">
+													<option *ngFor="let item of arr_pro" [value]="item.nombre">{{ item.nombre }}</option>
+												  </select>
+												
+											</div>
+                                            <div class="col-lg-6 form-group">
+												<label for="">Ciudad (*)</label>
+                                                <select  class="form-select" name="Ciudad" id="Ciudad" [(ngModel)]="usuario.Ciudad">													
+                                                    <option *ngFor="let item of arr_ciud" [value]="item.nombre">{{ item.nombre }}</option>
+                                                   
+                                                </select>
+											</div>
+
+												<div class="col-lg-6 form-group">
+													<label>Estado (*)</label>
+													<select
+														class="form-control custom-select"
+														id="select-input-estado"
+														required
+														name="estado"
+														[(ngModel)]="usuario.estado"
+													>
+														<option value="" disabled>Seleccionar</option>
+														<option value="habilitado">Habilidado</option>
+														<option value="deshabilitado">Deshabilitado</option>
+													</select>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<ng-container >
+									<a
+										class="btn btn-warning btn-shadow mr-3"
+										[routerLink]="['/paciente']"
+										routerLinkActive="router-link-active"
+										>Regresar</a
+									>
+									<button *ngIf="!load_btn" class="btn btn-primary btn-shadow" type="submit">
+										Actualizar
+									</button>
+								</ng-container>
+								
+
+								<button disabled *ngIf="load_btn" type="button" class="btn btn-primary btn-shadow">
+									<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+									Creando...
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- / .row -->
+		</div>
+	</div>
+	<div class="main-content" *ngIf="!load_data_user">
+		<div class="spinner-grow text-primary" role="status">
+			<span class="visually-hidden">Cargando...</span>
+		  </div>
+	</div>
+</ng-container>
+
+<ng-container
+	*ngIf=" load_data_user && usuario == undefined"
+> 
+	<div class="card">
+		<div class="card-body">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-5 col-xl-4 my-5">
+					<div class="text-center">
+						<!-- Preheading -->
+						<h6 class="text-uppercase text-muted mb-4">404 error</h6>
+
+						<!-- Heading -->
+						<h1 class="display-4 mb-3">Está página no se cuentra habilitada para ti 😭</h1>
+                        
+						<!-- Subheading -->
+						<p class="text-muted mb-4">¿Parece que llegaste aquí por accidente?</p>
+
+						<!-- Button -->
+						<a [routerLink]="['/usuario']" class="btn btn-lg btn-primary"> Regresar a pagos </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-container>
+
+    </div>
+</div>
 <app-footer class="footer"></app-footer>
