@@ -180,6 +180,7 @@
 														<option value="1">Administrador</option>
 														<option value="2">Doctor(a)</option>
 														<option value="3">Enfermero(a)</option>
+														<option value="4">Voluntario</option>
 													</select>
 												</ng-container>
 												<ng-container *ngIf="idp == id">
@@ -187,7 +188,7 @@
 														<i *ngIf="usuario.fk_idrol == 1">Administrador</i>
 														<i *ngIf="usuario.fk_idrol == 2">Voluntario</i>
 														<i *ngIf="usuario.fk_idrol == 3">Enfermero(a)</i>
-														<i *ngIf="usuario.fk_idrol == 4">ROL 4</i>
+														<i *ngIf="usuario.fk_idrol == 4">Voluntario</i>
 													</div>
 												</ng-container>
 											</div>

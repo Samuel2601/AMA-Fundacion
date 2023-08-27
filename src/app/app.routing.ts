@@ -19,14 +19,14 @@ const appRoute: Routes = [
 
 	{ path: 'login', component: LoginComponent },
 	{ path: 'inicio', component: InicioComponent, canActivate: [AuthGuard] },
-	{ path: 'paciente', component: IndexPacienteComponent, canActivate: [AuthGuard] },
+	{ path: 'beneficiario', component: IndexPacienteComponent, canActivate: [AuthGuard] },
 	{
-		path: 'paciente/create',
+		path: 'beneficiario/create',
 		component: CreatePacienteComponent,
 		canActivate: [AuthGuard],
 	},
 	{
-		path: 'paciente/edit/:id',
+		path: 'beneficiario/edit/:id',
 		component: EditPacienteComponent,
 		canActivate: [AuthGuard],
 	},

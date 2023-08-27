@@ -18,7 +18,7 @@
 										<h6 class="header-pretitle">Módulo</h6>
 		
 										<!-- Title -->
-										<h1 class="header-title">PACIENTE</h1>
+										<h1 class="header-title">BENEFICIARIOS</h1>
 									</div>
 								</div>
 								<!-- / .row -->
@@ -43,7 +43,7 @@
 							<div class="card">
 								<div class="card-header">
 									<!-- Title -->
-									<h4 class="card-header-title">Mostrando todos tus paciente {{ arr_usuarios.length }}</h4>
+									<h4 class="card-header-title">Mostrando todos tus beneficiarios {{ arr_usuarios.length }}</h4>
 									
 									
 								</div>
@@ -67,7 +67,7 @@
 												<input
 													type="text"
 													class="form-control form-control-appended"
-													placeholder="Buscar paciente"
+													placeholder="Buscar beneficiario"
 													name="filtro"
 													[(ngModel)]="filtro"
 													(ngModelChange)="filtrar_estudiante()"
@@ -80,10 +80,10 @@
 													<ng-container  style="text-align: right">
 														<a
 															class="btn btn-primary"
-															[routerLink]="['/paciente/create']"
+															[routerLink]="['/beneficiario/create']"
 															routerLinkActive="router-link-active"
 															style="cursor: pointer"
-															>Nuevo Usuario</a
+															>Nuevo Beneficiario</a
 														>
 													</ng-container>
 		
@@ -159,7 +159,7 @@
 
                                                         
 														<td>
-															<a class="text-primary" [routerLink]="['/paciente/edit', item.element.id_paciente]"
+															<a class="text-primary" [routerLink]="['/beneficiario/edit', item.element.id_paciente]"
 																>{{ item.element.Nombres }} {{ item.element.Apellidos }}</a
 															>
 															<br>
@@ -205,7 +205,7 @@
 																		<a
 																			class="dropdown-item"
 																			
-																			[routerLink]="['/paciente/edit', item.element.id_paciente]"
+																			[routerLink]="['/beneficiario/edit', item.element.id_paciente]"
 																			>Editar</a
 																		>
 																	</li>
@@ -238,7 +238,7 @@
 																			</button>
 																		</div>
 																		<div class="modal-body">
-																			<p>Desea eliminar este paciente? {{ item.element.id_paciente }}</p>
+																			<p>Desea eliminar este beneficiario? {{ item.element.id_paciente }}</p>
 																		</div>
 																		<div class="modal-footer">
 																			<button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">
@@ -286,7 +286,7 @@
 											</button>
 										</div>
 										<div class="modal-body">
-											<p>Desea eliminar estos paciente?  {{ contarUsuariosSeleccionados() }}</p>
+											<p>Desea eliminar estos beneficiario?  {{ contarUsuariosSeleccionados() }}</p>
 										</div>
 										<div class="modal-footer">
 											<button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">
@@ -310,7 +310,7 @@
 											</button>
 										</div>
 										<div class="modal-body">
-											<p>Desea reactivar este paciente?</p>
+											<p>Desea reactivar este beneficiario?</p>
 										</div>
 										<div class="modal-footer">
 											<button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">
